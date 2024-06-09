@@ -7,7 +7,7 @@ Another simple RESTful API that I've created with Express.js for managing data f
 
 This project was a way for me to put into practice the technical knowledge I've recently acquired with Express.js and API creation.
 
-Check out my API deployed on Render here.
+Check out my API deployed on Render [here](https://album-api-ay93.onrender.com/).
 
 ## API Endpoints
 
