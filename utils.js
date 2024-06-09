@@ -6,4 +6,9 @@ const getRandomAlbum = () => {
   return albums[randomIndex];
 };
 
-module.exports = { getRandomAlbum };
+// Define getAlbumById function and export:
+const getAlbumById = (id) => {
+  return albums[id];
+};
+
+module.exports = { getRandomAlbum, getAlbumById };

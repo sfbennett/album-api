@@ -4,7 +4,7 @@ const port = 3000;
 // Import the albums data from the data.js file //
 const { albums } = require("./data");
 // Import getRandomAlbum function //
-const { getRandomAlbum } = require("./utils");
+const { getRandomAlbum, getAlbumById } = require("./utils");
 
 // ALBUMS ROUTER //
 const albumsRouter = express.Router();
