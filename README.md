@@ -1,10 +1,10 @@
 # ALBUM API
 
-A simple RESTful API that I've created with Express.js for managing data from different end points:
+A simple RESTful API I've created with Express.js for managing data from different endpoints:
 
 - Get a list of albums
 - Generate a random album
-- Get album by ID
+- Get an album by ID
 - Get an album by title
 - Get an album by artist
 - Add an album
@@ -43,7 +43,7 @@ For example, to retrieve the albm with the ID 5, the URL would be: `api/albums/5
 
 For example, to retrieve an album by title, the URL would be: `api/albums/title/Paranoid`.
 
-When the album is longer than one word, use %20 between each word like so: `api/albums/title/Black%20Sabbath`.
+When the album is longer than one word, use %20 between each word: `api/albums/title/Black%20Sabbath`.
 
 ### Get album by artist
 

@@ -139,6 +139,30 @@ const albums = [
     artist: "Kaytranada",
     year: "December 2019",
   },
+  {
+    id: 23,
+    title: "GLOW ON",
+    artist: "Turnstile",
+    year: "August 2021",
+  },
+  {
+    id: 23,
+    title: "The Carnival Bizarre",
+    artist: "Cathedral",
+    year: "September 1995",
+  },
+  {
+    id: 24,
+    title: "Disintegration",
+    artist: "The Cure",
+    year: "May 1989",
+  },
+  {
+    id: 25,
+    title: "Hounds of Love",
+    artist: "Kate Bush",
+    year: "September 1985",
+  },
 ];
 
 module.exports = { albums };
