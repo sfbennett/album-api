@@ -39,7 +39,7 @@ For example, to retrieve the albm with the ID 5, the URL would be: `api/albums/5
 ### Get album by title
 
 - Method: `GET`
-- URL: `api/albums/title/:titleName`
+- URL: `/api/albums/title/:titleName`
 
 For example, to retrieve an album by title, the URL would be: `api/albums/title/Paranoid`.
 
@@ -48,14 +48,14 @@ When the album is longer than one word, use %20 between each word: `api/albums/t
 ### Get album by artist
 
 - Method: `GET`
-- URL: `api/albums/artist/:artistName`
+- URL: `/api/albums/artist/:artistName`
 
 For example, to retrieve all albums by a specific artist, the URL would be: `api/albums/artist/:artistName`.
 
 ### Add an album
 
 - Method: `POST`
-- URL: `api/albums`
+- URL: `/api/albums`
 
 ## Technologies Used
 
