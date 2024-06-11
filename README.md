@@ -1,14 +1,6 @@
-# ALBUM API
+# Album API
 
 A simple RESTful API I've created with Express.js to manage data from different endpoints and implement testing.
-
-- Get a list of albums
-- Generate a random album
-- Get an album by ID
-- Get an album by title
-- Get an album by artist
-- Add an album
-- Delete an album
 
 This project was a way for me to implement the technical knowledge I've acquired with Express.js, API creation, and testing. Check out my API deployed on Render [here](https://sbennett-album-api.onrender.com).
 
