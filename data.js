@@ -165,4 +165,4 @@ const albums = [
   },
 ];
 
-module.exports = { albums };
+export { albums };

@@ -1,16 +1,16 @@
-const express = require("express");
+import express from "express";
 const app = express();
 const port = 3000;
 // Import the albums data from the data.js file:
-const { albums } = require("./data");
+import { albums } from "./data.js";
 // Import getRandomAlbum function:
-const {
+import {
   getRandomAlbum,
   getAlbumById,
   addNewAlbum,
   findAlbumByTitle,
   getAlbumByArtist,
-} = require("./utils");
+} from "./utils.js";
 
 // -- ALBUMS ROUTER -- //
 const albumsRouter = express.Router();
@@ -99,3 +99,5 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+export default app;

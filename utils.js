@@ -1,4 +1,4 @@
-const { albums } = require("./data");
+import { albums } from "./data.js";
 
 // Define getRandomAlbum function and export:
 const getRandomAlbum = () => {
@@ -34,7 +34,7 @@ const getAlbumByArtist = (artistName) => {
   return albumsByArtist;
 };
 
-module.exports = {
+export {
   getRandomAlbum,
   getAlbumById,
   addNewAlbum,

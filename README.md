@@ -1,6 +1,6 @@
 # ALBUM API
 
-A simple RESTful API I've created with Express.js for managing data from different endpoints.
+A simple RESTful API I've created with Express.js to manage data from different endpoints and implement testing.
 
 - Get a list of albums
 - Generate a random album
@@ -10,7 +10,7 @@ A simple RESTful API I've created with Express.js for managing data from differe
 - Add an album
 - Delete an album
 
-This project was a way for me to implement the technical knowledge I've acquired with Express.js and API creation.
+This project was a way for me to implement the technical knowledge I've acquired with Express.js, API creation, and testing.
 
 Check out my API deployed on Render [here](https://sbennett-album-api.onrender.com).
 
@@ -95,3 +95,6 @@ For example, to retrieve all albums by a specific artist, the URL would be: `api
 - HTTP Methods
 - JSON
 - Render for hosting
+- SuperTest
+- Mocha
+- Chai
