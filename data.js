@@ -91,6 +91,54 @@ const albums = [
     artist: "NoSo",
     year: "July 2022",
   },
+  {
+    id: 16,
+    title: "Painkiller",
+    artist: "Judas Priest",
+    year: "September 1990",
+  },
+  {
+    id: 17,
+    title: "Master of Reality",
+    artist: "Black Sabbath",
+    year: "July 1971",
+  },
+  {
+    id: 18,
+    title: "Sabbath Bloody Sabbath",
+    artist: "Black Sabbath",
+    year: "December 1973",
+  },
+  {
+    id: 19,
+    title: "Never Say Die",
+    artist: "Black Sabbath",
+    year: "September 1978",
+  },
+  {
+    id: 20,
+    title: "Witchcult Today",
+    artist: "Electric Wizard",
+    year: "November 2007",
+  },
+  {
+    id: 21,
+    title: "ABOUT U",
+    artist: "MUNA",
+    year: "February 2017",
+  },
+  {
+    id: 21,
+    title: "boygenius",
+    artist: "boygenius",
+    year: "October 2018",
+  },
+  {
+    id: 22,
+    title: "BUBBA",
+    artist: "Kaytranada",
+    year: "December 2019",
+  },
 ];
 
 module.exports = { albums };
