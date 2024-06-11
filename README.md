@@ -12,7 +12,7 @@ A simple RESTful API I've created with Express.js for managing data from differe
 
 This project was a way for me to implement the technical knowledge I've acquired with Express.js and API creation.
 
-Check out my API deployed on Render [here](https://album-api-sbennett.onrender.com).
+Check out my API deployed on Render [here](https://sbennett-album-api.onrender.com).
 
 ## Installation
 
@@ -35,7 +35,7 @@ node app.js
 - Method: `GET`
 - URL: `/api/albums`
 
-For example, to see a full list of albums visit: https://album-api-sbennett.onrender.com/api/albums
+For example, to see a full list of albums visit: https://sbennett-album-api.onrender.com/api/albums
 
 ### Get random album
 
