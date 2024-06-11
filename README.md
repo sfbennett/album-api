@@ -10,9 +10,7 @@ A simple RESTful API I've created with Express.js to manage data from different 
 - Add an album
 - Delete an album
 
-This project was a way for me to implement the technical knowledge I've acquired with Express.js, API creation, and testing.
-
-Check out my API deployed on Render [here](https://sbennett-album-api.onrender.com).
+This project was a way for me to implement the technical knowledge I've acquired with Express.js, API creation, and testing. Check out my API deployed on Render [here](https://sbennett-album-api.onrender.com).
 
 ## Installation
 
