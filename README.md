@@ -13,6 +13,20 @@ This project was a way for me to implement the technical knowledge I've acquired
 
 Check out my API deployed on Render [here](https://album-api-ay93.onrender.com/).
 
+## Installation
+
+```
+git clone https://github.com/yourusername/album-api.git
+cd album-api
+npm install
+```
+
+## Running the server
+
+```
+node app.js
+```
+
 ## API Endpoints
 
 ### Get all albums
@@ -56,6 +70,20 @@ For example, to retrieve all albums by a specific artist, the URL would be: `api
 
 - Method: `POST`
 - URL: `/api/albums`
+- Request body example:
+
+```
+{
+  "title": "Album Title",
+  "artist": "Album Artist",
+  "year": "Album Year"
+}
+```
+
+### Delete an album
+
+- Method: `DELETE`
+- URL: `/api/albums/:albumId`
 
 ## Technologies Used
 

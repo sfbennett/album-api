@@ -74,6 +74,19 @@ albumsRouter.post("/", (req, res) => {
   res.status(201).send(addedAlbum);
 });
 
+// DELETE -- an album:
+albumsRouter.delete("/:albumId", (req, res) => {
+  const albumId = parseInt(req.params.albumId);
+  const index = albums.findIndex((album) => album.id === albumId);
+
+  if (index >= 0) {
+    albums.splice(index, 1);
+    res.status(204).send("Album deleted!");
+  } else {
+    res.status(404).send("Album does not exist!");
+  }
+});
+
 // Mount all Routers to be able to use them:
 app.use("/api/albums", albumsRouter);
 
