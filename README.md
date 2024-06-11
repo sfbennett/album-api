@@ -21,7 +21,7 @@ cd album-api
 npm install
 ```
 
-## Running the server
+## Running the server
 
 ```
 node app.js
