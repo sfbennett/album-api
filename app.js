@@ -1,17 +1,23 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-// Import the albums data from the data.js file //
+// Import the albums data from the data.js file:
 const { albums } = require("./data");
-// Import getRandomAlbum function //
-const { getRandomAlbum, getAlbumById } = require("./utils");
+// Import getRandomAlbum function:
+const {
+  getRandomAlbum,
+  getAlbumById,
+  addNewAlbum,
+  findAlbumByTitle,
+  getAlbumByArtist,
+} = require("./utils");
 
-// ALBUMS ROUTER //
+// -- ALBUMS ROUTER -- //
 const albumsRouter = express.Router();
 
-// Album Middleware (to valid that the album exists in the database)
+// Album Middleware -- to validate that the album exists in the database:
 
-albumsRouter.param("albumID", (req, res, next, albumId) => {
+albumsRouter.param("albumId", (req, res, next, albumId) => {
   const album = getAlbumById(albumId);
   if (album) {
     req.album = album;
@@ -21,27 +27,54 @@ albumsRouter.param("albumID", (req, res, next, albumId) => {
   }
 });
 
-// GET All Albums //
+// GET -- all albums:
 albumsRouter.get("/", (req, res) => {
   res.json(albums);
 });
 
-// GET Album by Id //
+// GET -- an album by ID:
 albumsRouter.get("/albumId", (req, res) => {
   res.send(req.album);
 });
 
-// GET a Random Album //
+// GET -- an album by title:
+albumsRouter.get("/title/:albumTitle", (req, res) => {
+  const albumTitle = req.params.albumTitle;
+  const foundAlbum = findAlbumByTitle(albumTitle);
+
+  if (foundAlbum) {
+    res.json(foundAlbum);
+  } else {
+    res.status(404).send("Album not found!");
+  }
+});
+
+// GET -- album by artist:
+albumsRouter.get("/artist/:artistName", (req, res) => {
+  const artistName = req.params.artistName;
+  const albumsByArtist = getAlbumByArtist(artistName);
+
+  if (albumsByArtist) {
+    res.json(albumsByArtist);
+  } else {
+    res.status(404).send("Artist not found!");
+  }
+});
+
+// GET -- a random album:
 albumsRouter.get("/random", (req, res) => {
   const randomAlbum = getRandomAlbum();
   res.json(randomAlbum);
 });
 
-// ADD an album //
+// POST -- add a new album:
+albumsRouter.post("/", (req, res) => {
+  const newAlbum = req.body;
+  const addedAlbum = addNewAlbum(newAlbum);
+  res.status(201).send(addedAlbum);
+});
 
-// DELETE an album //
-
-// Mount all Routers to be able to use them //
+// Mount all Routers to be able to use them:
 app.use("/api/albums", albumsRouter);
 
 // 2. Basic Hello World Route Handler
