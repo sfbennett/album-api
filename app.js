@@ -102,17 +102,23 @@ app.get("/", (req, res) => {
     background-color: #FCDC94; 
     text-align: center; 
     padding: 50px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
   }
   h1 { 
     color: #444; 
-    font-size: 32px; 
+    font-size: 34px; 
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-bottom: 0px; 
   }
   h4 { 
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: #555; 
     font-size: 18xpx; 
     padding-bottom: 20px; 
+    font-style: italic; 
   }
   p { 
     color: #555; 
@@ -124,17 +130,25 @@ app.get("/", (req, res) => {
     padding-bottom: 10px; 
     font-weight: bold; 
   }
+  div { 
+    background: #FFFBDA; 
+    padding: 10px; 
+    border-radius: 5px;
+    width: 650px; 
+  }
   </style>
   </head>
   <body>
   <h1>Welcome to my ALBUM API</h1>
-  <h4>This is a RESTful API that I've created using Express.js</h4>
+  <h4>A RESTful API that I've created using Express.js</h4>
+  <div>
   <p class="cta">Try out these API endpoints:</p>
   <p>1. GET all albums --> /api/albums</p>
   <p>2. GET a random album --> /api/albums/random</p>
   <p>3. GET album by artist --> /api/albums/artist/Black%20Sabbath</p>
   <p>4. GET album by title --> /api/albums/title/MUNA</p>
   <p>5. DELETE an album --> /api/albums/:albumId</p>
+  </div>
   </body>
   </html>
   `;
