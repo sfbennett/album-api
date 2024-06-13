@@ -92,7 +92,54 @@ app.use("/api/albums", albumsRouter);
 
 // 2. Basic Hello World Route Handler
 app.get("/", (req, res) => {
-  res.send("Hello, world! Welcome to my Album API made using Express.");
+  const htmlResponse = `
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title>Album API</title>
+  <style>
+  body { 
+    background-color: #FCDC94; 
+    text-align: center; 
+    padding: 50px; 
+  }
+  h1 { 
+    color: #444; 
+    font-size: 32px; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  }
+  h4 { 
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: #555; 
+    font-size: 18xpx; 
+    padding-bottom: 20px; 
+  }
+  p { 
+    color: #555; 
+    font-size: 16px; 
+    font-family: 'Courier New', monospace;
+  }
+  .cta { 
+    color: #444; 
+    padding-bottom: 10px; 
+    font-weight: bold; 
+  }
+  </style>
+  </head>
+  <body>
+  <h1>Welcome to my ALBUM API</h1>
+  <h4>This is a RESTful API that I've created using Express.js</h4>
+  <p class="cta">Try out these API endpoints:</p>
+  <p>1. GET all albums --> /api/albums</p>
+  <p>2. GET a random album --> /api/albums/random</p>
+  <p>3. GET album by artist --> /api/albums/artist/Black%20Sabbath</p>
+  <p>4. GET album by title --> /api/albums/title/MUNA</p>
+  <p>5. DELETE an album --> /api/albums/:albumId</p>
+  </body>
+  </html>
+  `;
+
+  res.send(htmlResponse);
 });
 
 // 1. Start Express server and have it listen for HTTP requests
